@@ -24,4 +24,4 @@ class NtlmAuthMiddleware(object):
 		resp = urllib2.urlopen(url)
 		msg = resp.info()
 
-		return TextResponse(url=url, status=resp.getcode(), headers=msg.items(), body=resp.read())
+		return HtmlResponse(url=url, status=resp.getcode(), headers=msg.items(), body=resp.read())
